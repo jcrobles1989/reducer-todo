@@ -10,6 +10,8 @@ const TodoForm = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        props.dispatch({ type: "ADD_TASK", payload: newTask });
+        setNewTask("")
     }
 
     return (
